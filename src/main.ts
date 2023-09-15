@@ -24,18 +24,15 @@ import App from './App.vue'
 const routes = autoRoutes.map((i) => {
   return {
     ...i,
-    alias: i.path.endsWith('/')
-      ? `${i.path}index.html`
-      : `${i.path}.html`,
+    alias: i.path.endsWith('/') ? `${i.path}index.html` : `${i.path}.html`
   }
 })
 console.log('log--> routes', routes)
 
-
 export const createApp = ViteSSG(
   App,
   {
-    routes,
+    routes
   },
   ({ router, app, isClient }) => {
     dayjs.extend(LocalizedFormat)
@@ -48,14 +45,12 @@ export const createApp = ViteSSG(
         selectors: {
           html(ctx) {
             // only do the sliding transition when the scroll position is not 0
-            if (ctx.savedPosition?.top)
-              html.classList.add('no-sliding')
-            else
-              html.classList.remove('no-sliding')
+            if (ctx.savedPosition?.top) html.classList.add('no-sliding')
+            else html.classList.remove('no-sliding')
             return true
-          },
+          }
         },
-        behavior: 'auto',
+        behavior: 'auto'
       })
 
       router.beforeEach(() => {
@@ -65,5 +60,5 @@ export const createApp = ViteSSG(
         NProgress.done()
       })
     }
-  },
+  }
 )
