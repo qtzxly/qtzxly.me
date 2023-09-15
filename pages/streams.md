@@ -98,9 +98,14 @@ items:
     path: 'https://www.bilibili.com/video/BV1eh4y1J75z'
     platform: Bilibili
     lang: 'zh'
+  - title: 'stream页面'
+    date: '2023-05-05'
+    path: 'https://www.bilibili.com/video/BV1eh4y1J75z'
+    platform: Bilibili
+    lang: 'zh'
 ---
 
-<SubNav />
+<!-- <SubNav /> -->
 
 <div slide-enter>
 

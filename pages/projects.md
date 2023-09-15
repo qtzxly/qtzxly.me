@@ -12,7 +12,8 @@ projects:
       icon: 'i-logos-nuxt-icon saturate-0'
 
   Vue Ecosystem:
-    - name: 'VueUse'
+  
+    - name: 'VueUse111111111111'
       link: 'https://github.com/antfu/vueuse'
       desc: 'Collection of Composition API utils for Vue 2 and 3'
       icon: 'vueuse'

@@ -1,5 +1,5 @@
 ---
-title: 通过type：note，添加nodte页面
+title: Isomorphic `__dirname`
 date: 2021-08-30T16:00:00Z
 lang: en
 duration: 1min

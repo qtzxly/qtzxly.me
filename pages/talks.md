@@ -15,7 +15,7 @@ items:
     path: 'https://vuefes.jp/2023/'
 ---
 
-<SubNav />
+<!-- <SubNav /> -->
 
 <div slide-enter>
   <div i-ri:presentation-line mr-1 />

@@ -90,8 +90,14 @@ items:
     lang: 'zh'
     video: true
     radio: true
+  - title: '这里是podcast页面'
+    date: '2023-07-22'
+    path: 'https://fm.cali.so/64bb61a2d0844ea8123acc7f'
+    lang: 'zh'
+    video: true
+    radio: true
 ---
 
-<SubNav />
+<!-- <SubNav /> -->
 
 <ListPosts :posts="frontmatter.items.reverse()" />

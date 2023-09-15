@@ -1,9 +1,12 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { toggleDark } from '~/logics'
 </script>
 
 <template>
   <a class="select-none" title="Toggle Color Scheme" @click="toggleDark">
-    <div i-ri-sun-line dark:i-ri-moon-line />
+    <div
+      i-line-md-moon-to-sunny-outline-loop-transition
+      dark:i-line-md-moon-alt-loop
+    />
   </a>
 </template>

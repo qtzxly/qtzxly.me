@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import { englishOnly } from '../logics'
 
 const inactiveStyle = 'opacity-20 hover:opacity-50'
-const activeStyle = 'opacity-100 underline'
+const activeStyle = 'opacity-80 underline'
 
 const route = useRoute()
 </script>

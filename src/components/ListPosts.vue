@@ -24,6 +24,10 @@ const routes: Post[] = router.getRoutes()
     redirect: i.meta.frontmatter.redirect,
   }))
 
+  console.log('log--> routes', routes)
+  console.log('log--> router.getRoutes()', router.getRoutes())
+  
+
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
@@ -61,7 +65,7 @@ function getGroupName(p: Post) {
           '--enter-step': '60ms',
         }"
       >
-        <span text-8em color-transparent absolute left--3rem top--2rem font-bold text-stroke-2 text-stroke-hex-aaa op10>{{ getGroupName(route) }}</span>
+        <span text-9em color-transparent absolute left--3rem top--2rem font-bold text-stroke-2 text-stroke-hex-aaa op30>{{ getGroupName(route) }}</span>
       </div>
       <div
         class="slide-enter"
@@ -120,7 +124,7 @@ function getGroupName(p: Post) {
               />
 
               <span text-sm op50 ws-nowrap>
-                {{ formatDate(route.date, true) }}
+                blog时间：{{ formatDate(route.date, false) }}
               </span>
               <span v-if="route.duration" text-sm op40 ws-nowrap>· {{ route.duration }}</span>
               <span v-if="route.platform" text-sm op40 ws-nowrap>· {{ route.platform }}</span>

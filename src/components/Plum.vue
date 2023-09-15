@@ -4,7 +4,7 @@ import type { Fn } from '@vueuse/core'
 const r180 = Math.PI
 const r90 = Math.PI / 2
 const r15 = Math.PI / 12
-const color = '#88888825'
+const color = '#99999945'
 
 const el = ref<HTMLCanvasElement | null>(null)
 
@@ -67,8 +67,8 @@ onMounted(async () => {
       return
 
     const rate = counter.value <= MIN_BRANCH
-      ? 0.8
-      : 0.5
+      ? 0.801
+      : 0.501
 
     // left branch
     if (random() < rate)

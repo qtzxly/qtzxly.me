@@ -1,11 +1,12 @@
 ---
-title: Anthony Fu
-description: Anthony Fu's Portfolio
-image: https://antfu.me/og.png
+title: Somthing
+description: Somthing's Portfolio
+image: ''
 plum: true
 ---
+<ListPosts only-date type="blog" />
 
-Hey, I am Anthony Fu, a fanatical open sourceror.
+<!-- Hey, I am Anthony Fu, a fanatical open sourceror.
 
 Working at [<span i-simple-icons-nuxtdotjs /> NuxtLabs](https://nuxtlabs.com/).<br>
 Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Elk](https://github.com/elk-zone/elk), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
@@ -13,13 +14,13 @@ Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [V
 
 Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I also do some generative-art, compform, interactivity experiments on [100.antfu.me](https://100.antfu.me/).
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Paris), maybe we can hang out and take some photos or code together.
+Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Paris), maybe we can hang out and take some photos or code together. -->
 
-<div flex-auto />
+<div flex-auto bg-blue />
 
 ***
 
-Find me on
+<!-- Find me on
 
 <p flex="~ gap-3 wrap" class="mt--2!">
   <a href="https://github.com/antfu" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
@@ -34,4 +35,4 @@ Find me on
   <a href="https://space.bilibili.com/668380" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
 </p>
 
-If you enjoy my works, consider sponsoring me on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to keep them sustainable.
+If you enjoy my works, consider sponsoring me on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/antfu) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/antfu) to keep them sustainable. -->
