@@ -6,10 +6,10 @@ import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 
-const DOMAIN = 'https://antfu.me'
+const DOMAIN = 'https://qtzxly.github.io'
 const AUTHOR = {
-  name: 'Anthony Fu',
-  email: 'hi@antfu.me',
+  name: 'qtzxly',
+  email: 'qtzxly@gmail.com',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -26,15 +26,15 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'Anthony Fu',
-    description: 'Anthony Fu\' Blog',
-    id: 'https://antfu.me/',
-    link: 'https://antfu.me/',
-    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
+    title: 'qtzxly',
+    description: 'qtzxly\' Blog',
+    id: 'https://qtzxly.github.io/',
+    link: 'https://qtzxly.github.io/',
+    copyright: 'CC BY-NC-SA 4.0 2021 © qtzxly',
     feedLinks: {
-      json: 'https://antfu.me/feed.json',
-      atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml',
+      json: 'https://qtzxly.github.io/feed.json',
+      atom: 'https://qtzxly.github.io/feed.atom',
+      rss: 'https://qtzxly.github.io/feed.xml',
     },
   }
   const posts: any[] = (
@@ -44,8 +44,8 @@ async function buildBlogRSS() {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
 
-          if (data.lang !== 'en')
-            return
+          // if (data.lang !== 'en')
+          //   return
 
           const html = markdown.render(content)
             .replace('src="/', `src="${DOMAIN}/`)
@@ -71,8 +71,8 @@ async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://antfu.me/avatar.png'
-  options.favicon = 'https://antfu.me/logo.png'
+  options.image = 'https://qtzxly.github.io/avatar.png'
+  options.favicon = 'https://qtzxly.github.io/logo.png'
 
   const feed = new Feed(options)
 

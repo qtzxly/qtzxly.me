@@ -27,7 +27,6 @@ const routes = autoRoutes.map((i) => {
     alias: i.path.endsWith('/') ? `${i.path}index.html` : `${i.path}.html`
   }
 })
-console.log('log--> routes', routes)
 
 export const createApp = ViteSSG(
   App,
