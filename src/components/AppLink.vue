@@ -11,10 +11,13 @@ const isExternalLink = computed(() => {
 </script>
 
 <template>
+  <span>AppLink</span>
   <a v-if="isExternalLink" v-bind="$attrs" :href="to" target="_blank">
+    ==========================
     <slot />
   </a>
   <RouterLink v-else v-bind="$props">
+    ==========================
     <slot />
   </RouterLink>
 </template>

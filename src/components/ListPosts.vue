@@ -24,8 +24,8 @@ const routes: Post[] = router.getRoutes()
     redirect: i.meta.frontmatter.redirect,
   }))
 
-  console.log('log--> routes', routes)
-  console.log('log--> router.getRoutes()', router.getRoutes())
+  // console.log('log--> routes', routes)
+  // console.log('log--> router.getRoutes()', router.getRoutes())
   
 
 const posts = computed(() =>

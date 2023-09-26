@@ -22,6 +22,8 @@ import App from './App.vue'
 // console.log(' VITE_MD: ',  import.meta.env.VITE_MD);
 
 const routes = autoRoutes.map((i) => {
+  console.log('routesi',i.path.endsWith('/') ?i:'---');
+  
   return {
     ...i,
     alias: i.path.endsWith('/') ? `${i.path}index.html` : `${i.path}.html`
