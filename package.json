@@ -7,7 +7,7 @@
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force && esno scripts/copy-sponsors",
-    "stat": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
+    "buil": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "redirects": "esno scripts/redirects.ts",
     "lint": "eslint .",
     "compress": "esno scripts/img-compress-staged.ts"

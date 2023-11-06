@@ -36,6 +36,14 @@ onKeyStroke('Escape', (e) => {
     e.preventDefault()
   }
 })
+/* 
+首页  博客页  demo页  
+博客- 技术分享 markdown - 博客 - 随笔页
+demo页展示代码效果
+
+后期依赖过多可能项目臃肿  --  demo尽可能拆分独立 图片尽量压缩
+
+*/
 </script>
 
 <template>
