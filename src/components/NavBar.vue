@@ -63,11 +63,11 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Streams</span>
           <div i-line-md-play class="md:hidden" />
         </RouterLink> -->
-        <!-- 
+
         <RouterLink to="/demos" title="Demos">
           <span class="lt-md:hidden">Demos</span>
           <div i-line-md-lightbulb class="md:hidden" />
-        </RouterLink> -->
+        </RouterLink>
 
         <!-- <RouterLink to="/chat" title="Let's Chat">
           <div i-ri-chat-1-line />
