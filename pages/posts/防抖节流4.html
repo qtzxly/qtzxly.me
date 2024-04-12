@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>防抖节流</div>
+  </body>
+
+  <script>
+    // 节流 时间戳版
+    function throttle(func, delay) {
+      var last = 0
+      return function () {
+        var now = Date.now()
+        console.log('log--->now', now)
+        console.log('log--->last', last)
+
+        if (now > delay + last) {
+          func.apply(this, arguments)
+          last = now
+        } else {
+          console.log('log--->时间差不满足')
+        }
+      }
+    }
+  </script>
+
+  <script>
+    // 节流 定时器版
+    function throttle2(func, delay) {
+      var timer = null
+      return function () {
+        if (!timer) {
+          func.apply(this, arguments)
+          timer = setTimeout(() => {
+            timer = null
+          }, delay)
+        } else {
+          console.log('上一个定时器未完成')
+        }
+      }
+    }
+
+    function throttle11(func, delay) {
+      let timer = null
+      return () => {
+        func.apply(this, arguments)
+        if (!timer) {
+          timer = setTimeout(() => {
+            timer = null
+          }, delay)
+        } else {
+          console.log('log--->冷却中')
+        }
+      }
+    }
+  </script>
+
+  <script>
+    // 防抖
+    function debounce(func, delay) {
+      let timeout
+      return function () {
+        clearTimeout(timeout)
+        console.log('log--->重新读条')
+
+        timeout = setTimeout(() => {
+          console.log('log--->读条完毕')
+
+          func.apply(this, arguments)
+        }, delay)
+      }
+    }
+  </script>
+
+  <script>
+    function resize(e) {
+      console.log('窗口大小改变了')
+    }
+    // window.addEventListener('resize', resize)
+    // window.addEventListener('resize', throttle11(resize, 800))
+    window.addEventListener('resize', debounce(resize, 900))
+  </script>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+  <body>
+    <style>
+      div {
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        color: #fff;
+        background-color: #ccc;
+        font-size: 80px;
+      }
+    </style>
+
+    <div id="content"></div>
+    <p>只要鼠标在div区域内一移动，count函数就会被执行，数字就会增加</p>
+
+    <script>
+      let num = 1
+      const content = document.getElementById('content')
+      function count() {
+        content.innerHTML = num++
+      }
+      content.onmousemove = count
+
+      // 所谓防抖，就是指触发事件后 n 秒后才执行函数，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。
+
+      /**
+       * 非立即执行防抖函数
+       * @param {Function} func
+       * @param {number} delay
+       * @returns
+       */
+      function debounce(func, delay) {
+        let timeout
+        return function () {
+          const _this = this
+          const args = [...arguments]
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+          timeout = setTimeout(() => {
+            func.apply(_this, args)
+          }, delay)
+        }
+      }
+
+      /**
+       * 模拟打印index
+       * @param {number} index
+       */
+      function log(index) {
+        console.log('index:', index)
+      }
+      // 延迟一秒打印
+      const logFun = debounce(log, 1000)
+      // 索引
+      let index1 = 1
+      // 模拟100毫秒触发一次
+      const interval1 = setInterval(() => {
+        logFun(index1++)
+      }, 100)
+      // 模拟1秒后停止触发
+      setTimeout(() => {
+        clearInterval(interval1)
+      }, 1000)
+
+      /**
+       * 模拟修改car对象的frameNum属性
+       * @param {string} frameNum 车架号
+       */
+      function changeframeNum(frameNum) {
+        this.frameNum = frameNum
+        console.log(car)
+      }
+      const car = {
+        name: 'byd',
+        frameNum: '22112',
+        changeframeNum: debounce(changeframeNum, 2000)
+      }
+      let index2 = 0
+      const interval2 = setInterval(() => {
+        car.changeframeNum('2023' + index2++)
+      }, 100)
+      setTimeout(() => {
+        clearInterval(interval2)
+      }, 1000)
+    </script>
+  </body>
+</html>
